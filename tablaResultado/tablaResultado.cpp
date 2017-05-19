@@ -8,13 +8,13 @@ int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE , LPTSTR cmdLine, int cmdSh
 
 void tablaResultado::Window_Open(Win::Event& e)
 {
-	const double temperatura = 24.3;
+	int temperatura = 24;
+	int edad = 19;
 	int peso = 60;
-	wstring info;
-	wstring detalles;
-	peso=50;
-	Sys::Format(info, L"La temperatura es %.1f C", temperatura/3);
-	Sys::Format(detalles, L"El peso es %d Kg", peso / 2);
-	this->MessageBox(info,detalles, MB_OK);
+	wstring texto;
+	edad=10;
+	Sys::Format(texto, L"(%i,%d)->(%i,%i)", temperatura/2,5+temperatura,edad,peso-1);
+	this->MessageBox(texto, L"Resultado", MB_OK);
+	this->MessageBox(texto,L"Resultado",MB_OK);
 }
 
