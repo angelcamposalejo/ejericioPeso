@@ -11,8 +11,8 @@ void tablaResultado::Window_Open(Win::Event& e)
 	int temperatura = 24;
 	int peso = 60;
 	wstring texto;
-	peso *= 2;
-	Sys::Format(texto, L"%i->%i,%i->%i", temperatura, 2 * temperatura, peso, peso + 7);
+	peso /=(int)10.5;
+	Sys::Format(texto, L"(%i,%i)->(%i,%i)", temperatura/2, 5+temperatura, peso*2, peso-1);
 	this->MessageBox(texto, L"Resultado", MB_OK);
 }
 
