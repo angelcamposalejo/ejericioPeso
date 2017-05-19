@@ -10,14 +10,12 @@ void tablaResultado::Window_Open(Win::Event& e)
 {
 	int temperatura = 22;
 	int edad = 19;
-	int peso = 57;
-	wstring texto;
-	edad=20;
-	peso /= 2;
-	temperatura = 18 * 2;
-	Sys::Format(texto, L"(%i,%i)->(%i,%i)", temperatura/3,5+temperatura,edad,peso+1);
-	this->MessageBox(texto, L"Resultado", MB_OK);
-	this->MessageBox(L"Hola",texto,MB_OK);
-	this->MessageBox(texto,texto,MB_OK);
+	double peso = 57/10;
+	wchar_t texto[256];
+	_snwprintf_s(texto, 256, _TRUNCATE, L"(%i,%g)", temperatura, peso - 1);
+	this->MessageBox(texto, L"Seven", MB_OK);
+	edad = 20 + 5;
+	_snwprintf_s(texto, 256, _TRUNCATE, L"%d)***(%.2f", edad+2, peso*2);
+	this->MessageBox(texto, L"Six", MB_OK);
 }
 
