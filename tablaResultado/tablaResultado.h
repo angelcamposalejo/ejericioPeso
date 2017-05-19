@@ -1,0 +1,27 @@
+#pragma once  //______________________________________ tablaResultado.h  
+#include "Resource.h"
+class tablaResultado: public Win::Dialog
+{
+public:
+	tablaResultado()
+	{
+	}
+	~tablaResultado()
+	{
+	}
+protected:
+	//______ Wintempla GUI manager section begin: DO NOT EDIT AFTER THIS LINE
+	void InitializeGui()
+	{
+		this->Text = L"tablaResultado";
+	}
+	void Window_Open(Win::Event& e);
+	void GetDialogTemplate(DLGTEMPLATE& dlgTemplate)
+	{
+		dlgTemplate.style = DS_CENTER | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU;
+	}
+	bool EventHandler(Win::Event& e)
+	{
+		return false;
+	}
+};
